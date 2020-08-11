@@ -4,7 +4,7 @@ export const fetchProducts = () => {
         fetch('http://localhost:3000/products')
         .then(resp => {return resp.json()
         }).then(respJSON => {
-            dispatch({ type: 'ADD_PRODUCTS', products: responseJSON.name })
+            dispatch({ type: 'BUY_SHIP', products: responseJSON.name })
         })
     }
 }
