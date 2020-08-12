@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import productsList from '../components/productsList';
-import { fetchProducts } from '../actions/productActions';
+import productsList from './components/productsList';
+import { fetchProducts } from './actions/productActions';
 
 import './App.css';
 
@@ -21,13 +21,13 @@ class App extends Component {
   }
 }
 
-mapStateToProps = state => {
+const mapStateToProps = state => {
   return {
     name: state.name
   }
 }
 
-mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => {
   return {
     fetchProducts: () => dispatch(fetchProducts())
   }
