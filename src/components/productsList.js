@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
 
-class productsList extends Component {
-    info = () => {
-        return this.props.info.map(ship => key={ship.id} )
-    }
+const ProductsList = (props) => {
 
-    render() {
-        return (
-            <div>
-                {this.info()}
-            </div>
-        )
-    }
+    return (
+        <div>
+            she made the Kessel Run in less than 12 parsecs
+        </div>
+    )
 }
 
-export default productsList;
+export default ProductsList;
