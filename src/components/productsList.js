@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 
 const ProductsList = (props) => {
 
+
     return (
         <div>
-            she made the Kessel Run in less than 12 parsecs
+            {props.products.map(product => <li key={product.id}>{product.name}</li>)}
         </div>
     )
 }

@@ -1,20 +1,17 @@
 export default function productsReducer(state = {products: []}, action) {
-    // switch(action.type) {
-    //     case 'LOADING':
-    //         return {
-    //             state
-    //         }
-    //     case 'BUY_SHIP':
-    //         return {
-    //             state
-    //         }
-    //     case 'SELL_SHIP':
-    //         return {
-    //             state
-    //         }
-    //     default:
-    //         return state;
-    // }
-    return state
+    switch(action.type) {
+        case 'FETCH_PRODUCTS':
+            return {products: action.payload}
+        case 'BUY_PRODUCT':
+            return {
+                state
+            }
+        case 'SELL_PRODUCT':
+            return {
+                state
+            }
+        default:
+            return state;
+    }
 }
 

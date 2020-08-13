@@ -1,10 +1,12 @@
 export function fetchProducts()   {
-    // return (dispatch) => {
-        // dispatch({ type: 'LOADING'})
+    return (dispatch) => {
+        console.log("actions actioning")
         fetch('http://localhost:3001/products')
         .then(resp => resp.json())
-        .then(data => console.log(data))
-            // dispatch({ type: 'BUY_SHIP', products: resp.name })
-        // )
-    // }
+        .then(data => dispatch ({
+            type: 'FETCH_PRODUCTS',
+            payload: data
+            })
+        )
+    }
 }
