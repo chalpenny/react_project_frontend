@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
 
-const ProductsList = (props) => {
+class ProductsList extends Component {
+
+    state = {
+        available: true
+    };
 
 
-    return (
-        <div>
-            {props.products.map(product => <li key={product.id}>{product.name}</li>)}
-        </div>
-    )
-}
+   handleClick = (event) => {
+    console.log(event)
+   };
+    render() {
+        return (
+            <div>
+                {this.props.products.map(product => 
+                <>
+                    <li key={product.id}>{product.name}</li>
+                    {console.log(product)}
+                    <button onClick={this.handleClick}>Buy</button>
+                </>
+                )}
+            </div>
+    )};
+
+};
 
 export default ProductsList;
