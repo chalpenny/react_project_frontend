@@ -1,24 +1,47 @@
 import React, { Component } from 'react';
+import { Route  } from 'react-router-dom';
+import ProductPage from './ProductPage';
 
 class ProductsList extends Component {
 
-    state = {
-        available: true
+    constructor() {
+        super();
+            this.state = {
+            available: true
+        };
+    }
+    
+    
+    handleBtnClick = () => {
+        this.setState(previousState => {
+            return {
+                available: !previousState.available
+            }
+        })
     };
 
-
-   handleClick = (event) => {
-    console.log(event)
-   };
+    handleNameClick = (event) => {
+        console.log(event.target.innerText)
+        {debugger}
+        return (
+            <div>
+                <> 
+                <Route path={'/products/${product.id'} render={(routerProps) => <ProductPage {...routerProps} products={this.props.products}/> } />            
+                </>
+            </div>
+        )
+    };
+            
     render() {
+        console.log("here")
         return (
             <div>
                 {this.props.products.map(product => 
-                <>
-                    <li key={product.id}>{product.name}</li>
-                    {console.log(product)}
-                    <button onClick={this.handleClick}>Buy</button>
-                </>
+                <div key={product.id}> 
+                    <li  onClick={this.handleNameClick}><ProductPage product={product}/></li>
+                    <li>Avail?{this.state.available}</li>
+                    <button onClick={this.handleBtnClick}>Buy</button>
+                </div>
                 )}
             </div>
     )};
