@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import ProductsContainer from './containers/ProductsContainer';
-import { fetchProducts } from './actions/productActions';
+// import { fetchProducts } from './actions/productActions';
 
 import './App.css'
 

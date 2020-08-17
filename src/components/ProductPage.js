@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
+// import ProductDetail from './ProductDetail'
 
-const ProductPage = (props) => {
-    {console.log("product page?")}
+class ProductPage extends Component {
+
+    constructor(props) {
+        super(props);
+            this.state = {
+            available: true
+        };
+    }
+
+    handleBtnClick = () => {
+        console.log("clicked")
+    };  
 
 
-    let prod = props.products[props.match.params.id - 1]
-    console.log(prod)
-
+    render() {
         return (
             <div>
-                {prod ? prod.name : null}
-            </div>
-    )
-};
+                ProductPageContainer
+               
+                <br></br><button onClick={this.handleBtnClick}>Buy</button>
 
-export default ProductPage; 
+            </div>
+    )};
+}
+
+export default ProductPage;
