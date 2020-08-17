@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route  } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import ProductsList from '../components/ProductsList';
 import ProductPage from '../components/ProductPage';
 import { connect } from 'react-redux';
@@ -15,9 +15,10 @@ class ProductsContainer extends Component {
     render() {
         return (
             <div>
-                {/* <Route exact path='./products' render={(routerProps) => <ProductsList {...routerProps} products={this.props.products}/> } /> */}
-                <ProductsList products={this.props.products}/> 
-                <Route path='./products/:id' render={(routerProps) => <ProductPage {...routerProps} products={this.props.products}/> } />            
+                <Switch>
+                    <Route path='/products/:id' render={(routerProps) => <ProductPage {...routerProps} products={this.props.products}/> } />            
+                    <Route exact path='/products' render={(routerProps) => <ProductsList {...routerProps} products={this.props.products}/> } />
+                </Switch>
             </div>
         )
     }

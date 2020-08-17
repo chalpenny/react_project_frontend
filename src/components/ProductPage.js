@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
 
-class ProductPage extends Component {
-
-    constructor(props) {
-        super(props);
-            this.state = {
-            available: true
-        };
-      }
+const ProductPage = (props) => {
+    {console.log("product page?")}
 
 
-
-    render() {
-        console.log("produits")
+    let prod = props.products[props.match.params.id - 1]
+    console.log(prod)
 
         return (
             <div>
-                {this.props.product.name}
+                {prod ? prod.name : null}
             </div>
-    )};
-
+    )
 };
 
-export default ProductPage;
+export default ProductPage; 

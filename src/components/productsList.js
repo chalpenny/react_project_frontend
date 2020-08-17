@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route  } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import ProductPage from './ProductPage';
 
 class ProductsList extends Component {
@@ -18,31 +18,18 @@ class ProductsList extends Component {
                 available: !previousState.available
             }
         })
-    };
-
-    handleNameClick = (event) => {
-        console.log(event.target.innerText)
-        {debugger}
-        return (
-            <div>
-                <> 
-                <Route path={'/products/${product.id'} render={(routerProps) => <ProductPage {...routerProps} products={this.props.products}/> } />            
-                </>
-            </div>
-        )
-    };
+    };  
             
     render() {
-        console.log("here")
+        console.log("prod list here")
         return (
             <div>
                 {this.props.products.map(product => 
                 <div key={product.id}> 
-                    <li  onClick={this.handleNameClick}><ProductPage product={product}/></li>
+                    <Link to={`/products/${product.id}`}>{product.name}</Link>
                     <li>Avail?{this.state.available}</li>
                     <button onClick={this.handleBtnClick}>Buy</button>
-                </div>
-                )}
+                </div> )}
             </div>
     )};
 
