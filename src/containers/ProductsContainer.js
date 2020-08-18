@@ -7,9 +7,9 @@ import { fetchProducts } from '../actions/productActions';
 
 class ProductsContainer extends Component {
 
-        componentDidMount() {
-            this.props.fetchProducts()
-        }
+    componentDidMount() {
+        this.props.fetchProducts()
+    }
 
 
     render() {

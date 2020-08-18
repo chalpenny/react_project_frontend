@@ -3,21 +3,24 @@ import ProductPage from '../components/ProductPage';
 import ProductDetail from '../components/ProductDetail'
 
 
-const ProductPageContainer = (props) => {
+class ProductPageContainer extends React.Component {
 
-    let prod = props.products[props.match.params.id - 1]
+    
+    render() {
 
+    let prod = this.props.products[this.props.match.params.id - 1]
+    
+    // debugger
+    return (
+        <>
+            <h2>
+                {prod ? prod.name : null}
+            </h2>
+            <ProductDetail product={this.props.products && prod}/>
+            <ProductPage available={prod}/>
+        </>
 
-        return (
-            <>
-                <h2>
-                    {prod ? prod.name : null}
-                </h2>
-                <ProductPage available={props.available}/>
-                <ProductDetail/>
-            </>
-
-    )
+    )}
 };
 
 export default ProductPageContainer; 

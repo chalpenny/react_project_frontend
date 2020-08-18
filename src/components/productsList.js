@@ -5,9 +5,9 @@ import ProductDetail from './ProductDetail';
 
 class ProductsList extends Component {
 
-    constructor() {
-        super();
-            this.state = {
+    constructor(props) {
+        super(props);
+        this.state = {
             available: true
         };
     }
@@ -20,7 +20,8 @@ class ProductsList extends Component {
             }
         })
     };  
-            
+          
+    
     render() {
 
         return (
@@ -28,8 +29,7 @@ class ProductsList extends Component {
                 {this.props.products.map(product => 
                 <div key={product.id}> 
                     <Link to={`/products/${product.id}`}>{product.name}</Link>
-                    <br></br><ProductDetail/><br></br>
-                    <li>Avail?{this.state.available}</li>
+                    <li>Avail?{this.state.available} or not</li>
                     <button onClick={this.handleBtnClick}>Buy</button>
                 </div> )}
             </div>

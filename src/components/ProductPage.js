@@ -16,12 +16,12 @@ class ProductPage extends Component {
 
 
     render() {
+        // {debugger}
+
         return (
             <div>
-                ProductPageContainer
-               
+                Avail/unavail                
                 <br></br><button onClick={this.handleBtnClick}>Buy</button>
-
             </div>
     )};
 }
