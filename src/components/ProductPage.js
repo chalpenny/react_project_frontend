@@ -1,29 +1,31 @@
 import React, { Component } from 'react';
-// import ProductDetail from './ProductDetail'
+import { connect } from "react-redux";
+import { updateProductStatus } from '../actions/updateProductStatus';
 
 class ProductPage extends Component {
 
-    constructor(props) {
-        super(props);
-            this.state = {
-            available: true
-        };
+    state = {
+        available: true
     }
 
-    handleBtnClick = () => {
-        console.log("clicked")
+    handleBtnClick = (event) => {
+        this.setState(state => ({
+            available: !state.available
+        }))
+        // {debugger}
+        // updateProductStatus(this.state, this.props.available.id)
     };  
 
 
     render() {
-        // {debugger}
 
         return (
             <div>
-                Avail/unavail                
-                <br></br><button onClick={this.handleBtnClick}>Buy</button>
+                <li>Avail?{this.state.available}</li>
+                <br></br>
+                <button available={this.state.available.toString()} onClick={this.handleBtnClick.bind(this)}>Buy</button>
             </div>
     )};
 }
 
-export default ProductPage;
+export default connect(null, )(ProductPage);

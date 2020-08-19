@@ -25,6 +25,7 @@ class ProductsContainer extends Component {
 }
 
 const mapStateToProps = state => {
+    // debugger
     return {
         products: state.products
     }
