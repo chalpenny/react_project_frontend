@@ -8,12 +8,12 @@ class ProductPage extends Component {
         available: true
     }
 
-    handleBtnClick = (event) => {
+    handleBtnClick = () => {
         this.setState(state => ({
             available: !state.available
         }))
         // {debugger}
-        // updateProductStatus(this.state, this.props.available.id)
+        this.props.updateProductStatus(this.state, this.props.available.id)
     };  
 
 
@@ -28,4 +28,4 @@ class ProductPage extends Component {
     )};
 }
 
-export default connect(null, )(ProductPage);
+export default connect(null, {updateProductStatus})(ProductPage);
