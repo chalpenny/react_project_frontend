@@ -9,23 +9,28 @@ class ProductPage extends Component {
     }
 
     handleBtnClick = () => {
-        this.setState(state => ({
-            available: !state.available
-        }))
-        // {debugger}
-        this.props.updateProductStatus(this.state, this.props.available.id)
+        this.setState(PreviousState => {
+            return {
+            available: !PreviousState.available}
+        })
+        this.props.updateProductStatus(this.state, this.props.product.id)
     };  
 
+    showAvailability = () => {
+
+        {debugger}
+    }
 
     render() {
 
         return (
             <div>
-                <li>Avail?{this.state.available}</li>
+                <li>Avail?{this.props.available}</li>
                 <br></br>
                 <button available={this.state.available.toString()} onClick={this.handleBtnClick.bind(this)}>Buy</button>
             </div>
     )};
 }
+
 
 export default connect(null, {updateProductStatus})(ProductPage);

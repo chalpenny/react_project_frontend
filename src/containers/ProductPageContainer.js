@@ -17,7 +17,7 @@ class ProductPageContainer extends React.Component {
                 {prod ? prod.name : null}
             </h2>
             <ProductDetail product={this.props.products && prod}/>
-            <ProductPage available={prod}/>
+            <ProductPage product={prod}/>
         </>
 
     )}

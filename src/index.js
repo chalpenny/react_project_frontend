@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import { BrowserRouter as Router } from 'react-router-dom';
 
+import { createStore, applyMiddleware, compose } from 'redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import App from './App';
 import productReducer from './reducers/productReducer.js';
 import './index.css';
 

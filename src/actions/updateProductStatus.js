@@ -15,8 +15,6 @@ export const updateProductStatus = (status, productId) => {
             type: 'CHANGE_AVAILABILITY', 
             payload: product
             })
-        )
-    // debugger;
-
+        ) 
     }
-}
+}  

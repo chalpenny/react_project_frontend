@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ProductsList from '../components/ProductsList';
 import ProductPageContainer from './ProductPageContainer';
+import UserCart from '../components/UserCart';
 import { connect } from 'react-redux';
 import { fetchProducts } from '../actions/productActions';
 
@@ -18,6 +19,8 @@ class ProductsContainer extends Component {
                 <Switch>
                     <Route path='/products/:id' render={(routerProps) => <ProductPageContainer {...routerProps} products={this.props.products}/> } />            
                     <Route path='/products' render={(routerProps) => <ProductsList {...routerProps} products={this.props.products}/> } />
+
+                    <Route path='/products/cart' render={(routerProps) => <UserCart {...routerProps} products={this.props.products}/> } />
                 </Switch>
             </div>
         )
@@ -25,7 +28,6 @@ class ProductsContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    // debugger
     return {
         products: state.products
     }
