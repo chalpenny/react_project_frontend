@@ -4,7 +4,7 @@ export const updateProductStatus = (status, productId) => {
 
     return (dispatch) => {
         fetch(`http://localhost:3001/products/${productId}`, {
-            method: 'PUT',
+            method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json'
             },

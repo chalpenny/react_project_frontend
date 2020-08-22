@@ -5,9 +5,7 @@ import { Link } from 'react-router-dom';
 
 class ProductsList extends Component {
 
-    // state = {
-    //         available: "true"
-    // }
+   
     
     
     // handleBtnClick = () => {
@@ -25,7 +23,7 @@ class ProductsList extends Component {
                 {this.props.products.map(product => 
                 <div key={product.id}> 
                     <Link to={`/products/${product.id}`}>{product.name}</Link>
-                    <li>Avail?{product.available}</li>
+                    <li>Avail?{product.available.toString()}</li>
                     <br></br>
                     {/* <button onClick={this.handleBtnClick}>Buy</button> */}
                 </div> )}
