@@ -8,7 +8,6 @@ import { Provider } from 'react-redux';
 
 import App from './App';
 import productReducer from './reducers/productReducer.js';
-import './index.css';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
