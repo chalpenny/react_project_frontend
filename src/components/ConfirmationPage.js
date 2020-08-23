@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const ConfirmationPage = (props) => {
+const ConfirmationPage = () => {
 
     return (
         <h5>
