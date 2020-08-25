@@ -6,6 +6,8 @@ const UserCart = (props) => {
 
     let items = props.products.filter(item => item.available) 
 
+    let total = 0
+
     function handleBtnClick() {
         props.history.push(`/purchase-complete`) 
       }
@@ -13,12 +15,12 @@ const UserCart = (props) => {
     return (
         <div>
             <div>
-                <h3>ITEM---------------------PRICE</h3>
+                <h4>ITEM---------------------PRICE</h4>
                 {items.map(item => 
-                    <h4 key={item.id}>{item.name}..................{item.cost_in_credits}</h4> )}
+                    <h5 key={item.id}>{item.name}..................{item.cost_in_credits}</h5> )}
             <br></br>
             </div>
-        <button onClick={handleBtnClick}>Complete Purchase</button>   
+        <button class="btn indigo" onClick={handleBtnClick}>Complete Purchase</button>   
         </div>
     );
 

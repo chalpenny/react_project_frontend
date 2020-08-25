@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 // import ProductPageContainer from './ProductPage';
 // import ProductDetail from './ProductDetail';
 
-class ProductsList extends Component {
-          
+class ProductsList extends Component {      
     
     render() {
         return (
@@ -17,20 +16,20 @@ class ProductsList extends Component {
             //     </div> )}
   
 
-                    <div class="row">
-                    <div class="col s12 m7">
-                    <div class="card">
-                        <div class="card-image">
-                        <img src="images/sample-1.jpg"></img>
-                        <span class="card-title">Card Title</span>
+                    <div className="row">
+                    <div className="col s12 m7">
+                    <div className="card">
+                        <span className="card-title"><Link to={`/products/${product.id}`}>{product.name}</Link></span>
+                        <div className="card-action, card-content" key={product.id}>
+                            {/* <Link to={`/products/${product.id}`}>{product.name}</Link> */}
+                            <ul class="card red white-text">Avail?{product.available.toString()}</ul>
                         </div>
-                        <div class="card-content" key={product.id}>
-                            <Link to={`/products/${product.id}`}>{product.name}</Link>
-                            <li>Avail?{product.available.toString()}</li>
+                        <div className="card-image">
+                        <img src="/images/SpaceWarfare-SWGMB.jpg" alt='ships in space placeholder' height='400'></img>
                         </div>
-                        <div class="card-action">
+                        {/* <div className="card-action">
                         <a href="#">This is a link</a>
-                        </div>
+                        </div> */}
                     </div>
                     </div>
                     </div>

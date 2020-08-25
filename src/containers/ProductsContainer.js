@@ -24,9 +24,9 @@ class ProductsContainer extends Component {
                     <Route path='/products/:id' render={(routerProps) => <ProductPageContainer {...routerProps} products={this.props.products}/> } />            
                     <Route path='/products' render={(routerProps) => <ProductsList {...routerProps} products={this.props.products}/> } />
 
-                    <Route path='/' render={(routerProps) => <HomePage {...routerProps} products={this.props.products}/> } />
                     <Route path='/cart' render={(routerProps) => <UserCart {...routerProps} products={this.props.products}/> } />
                     <Route path='/purchase-complete' render={(routerProps) => <ConfirmationPage {...routerProps} products={this.props.products}/> } />
+                    <Route path='/' render={(routerProps) => <HomePage {...routerProps} products={this.props.products}/> } />
                 </Switch>
             </div>
         )

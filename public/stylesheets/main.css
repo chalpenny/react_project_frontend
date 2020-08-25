@@ -1,0 +1,20 @@
+h1 {
+    color: red
+}
+
+h4 {
+    color: whitesmoke
+}
+
+h2, h5 {
+    color: rgb(75, 213, 238)
+}
+
+body {
+    background: url(https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg);
+    background: cover
+}
+
+.icon {
+    position: right
+  }
