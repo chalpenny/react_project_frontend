@@ -12,13 +12,13 @@ class ProductPageContainer extends React.Component {
     
     // debugger
     return (
-        <>
+        <div className='container'>
             <h2>
                 {prod ? prod.name : null}
             </h2>
             <ProductDetail product={this.props.products && prod}/>
             <ProductPage product={prod}/>
-        </>
+        </div>
 
     )}
 };

@@ -25,7 +25,7 @@ class ProductsList extends Component {
                             <ul class="card red white-text">Avail?{product.available.toString()}</ul>
                         </div>
                         <div className="card-image">
-                        <img src="/images/SpaceWarfare-SWGMB.jpg" alt='ships in space placeholder' height='400'></img>
+                        <img src="/images/SpaceWarfare-SWGMB.jpg" alt='ships in space placeholder'></img>
                         </div>
                         {/* <div className="card-action">
                         <a href="#">This is a link</a>

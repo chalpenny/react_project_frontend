@@ -13,14 +13,18 @@ const UserCart = (props) => {
       }
        
     return (
-        <div>
+        <div className='container'>
             <div>
-                <h4>ITEM---------------------PRICE</h4>
+                <h4>ITEM ----------- PRICE</h4>
                 {items.map(item => 
-                    <h5 key={item.id}>{item.name}..................{item.cost_in_credits}</h5> )}
+                    <h5 key={item.id}>{item.name} ................. {item.cost_in_credits}</h5> )}
             <br></br>
             </div>
-        <button class="btn indigo" onClick={handleBtnClick}>Complete Purchase</button>   
+            <h4 className="white-text">
+                Total =
+            </h4>
+            <br></br>
+        <button className="btn green" onClick={handleBtnClick}>Complete Purchase</button>   
         </div>
     );
 

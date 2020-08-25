@@ -35,7 +35,7 @@ class ProductPage extends Component {
             <div>
                 {/* <li>Avail?{ product.available.toString()}</li> */}
                 <br></br>
-                <button class= "btn indigo" available={this.state.available.toString()} onClick={this.handleBtnClick.bind(this)}>Buy</button>
+                <button class= "btn green" available={this.state.available.toString()} onClick={this.handleBtnClick.bind(this)}>Buy</button>
             </div>
     )};
 }
