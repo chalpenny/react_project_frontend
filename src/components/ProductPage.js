@@ -13,7 +13,8 @@ class ProductPage extends Component {
             return {
                 available: !PreviousState.available }}, function () {
                 this.props.updateProductStatus(this.state, this.props.product.id)
-        });  
+        });
+        alert("This item has been added to your cart");  
     }
 
     

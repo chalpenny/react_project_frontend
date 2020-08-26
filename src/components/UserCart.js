@@ -6,7 +6,13 @@ const UserCart = (props) => {
 
     let items = props.products.filter(item => !item.available) 
 
-    let total = 0
+    function total() {
+        let items = props.products.filter(item => !item.available) 
+
+        let t = 0;
+        items.forEach(item => t += item.cost_in_credits)
+        return t
+    }
 
     function handleBtnClick() {
         props.history.push(`/purchase-complete`) 
@@ -21,7 +27,7 @@ const UserCart = (props) => {
             <br></br>
             </div>
             <h4 className="white-text">
-                Total =
+                Total = {total()}
             </h4>
             <br></br>
         <button className="btn green" onClick={handleBtnClick}>Complete Purchase</button>   
