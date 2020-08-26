@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 
 const UserCart = (props) => {
 
-    let items = props.products.filter(item => item.available) 
+    let items = props.products.filter(item => !item.available) 
 
     let total = 0
 

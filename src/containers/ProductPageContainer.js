@@ -10,7 +10,6 @@ class ProductPageContainer extends React.Component {
 
     let prod = this.props.products[this.props.match.params.id - 1]
     
-    // debugger
     return (
         <div className='container'>
             <h2>
