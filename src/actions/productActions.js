@@ -1,4 +1,5 @@
 export function fetchProducts()   {
+    
     return (dispatch) => {
         fetch('http://localhost:3001/products')
         .then(resp => resp.json())
@@ -7,6 +8,6 @@ export function fetchProducts()   {
             payload: data
             })
         )
-        
     }
+
 }

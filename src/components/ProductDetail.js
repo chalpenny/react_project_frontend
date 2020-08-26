@@ -11,7 +11,7 @@ const ProductDetail = (props) => {
                 ship length: {props.product && props.product.length}<br></br>
                 speed: {props.product && props.product.max_atmosphering_speed}<br></br>
                 manufacturer: {props.product && props.product.manufacturer}<br></br>
-                cost: {props.product && props.product.cost_in_credits}<br></br>
+                cost: {props.product && props.product.cost_in_credits} credits<br></br>
             </h5>
                 
         </div>

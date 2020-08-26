@@ -1,7 +1,5 @@
 export const updateProductStatus = (status, productId) => {
     
-    // debugger;
-
     return (dispatch) => {
         fetch(`http://localhost:3001/products/${productId}`, {
             method: 'PATCH',
@@ -17,4 +15,5 @@ export const updateProductStatus = (status, productId) => {
             })
         ) 
     }
+    
 }  

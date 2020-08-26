@@ -26,9 +26,7 @@ const UserCart = (props) => {
                     <h5 key={item.id}>{item.name} ................. {item.cost_in_credits}</h5> )}
             <br></br>
             </div>
-            <h4 className="white-text">
-                Total = {total()}
-            </h4>
+            <h4 className="white-text">Total = {total()} credits</h4>
             <br></br>
         <button className="btn green" onClick={handleBtnClick}>Complete Purchase</button>   
         </div>

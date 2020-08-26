@@ -27,5 +27,4 @@ class ProductPage extends Component {
     )};
 }
 
-
 export default connect(null, {updateProductStatus})(ProductPage);

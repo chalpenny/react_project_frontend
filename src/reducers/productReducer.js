@@ -4,7 +4,6 @@ export default function productsReducer(state = {products: []}, action) {
         case 'FETCH_PRODUCTS':
             return {products: action.payload}
         case 'CHANGE_AVAILABILITY':
-            // debugger;
             let products = state.products.map(product => {
                 if (product.id === action.payload.id) {
                     return action.payload}

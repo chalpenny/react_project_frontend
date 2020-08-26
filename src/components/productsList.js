@@ -19,6 +19,8 @@ class ProductsList extends Component {
                         <div className="col s12 m7">
                             <div className="card">
                                 <span className="card-title"><Link to={`/products/${product.id}`}>{product.name}</Link></span>
+                                <br></br>
+                                <span className="card-content green-text">{product.cost_in_credits} credits</span>
                                 <div className="card-image">
                                 <img src="/images/SpaceWarfare-SWGMB.jpg" alt='ships in space placeholder'></img>
                                 </div>
