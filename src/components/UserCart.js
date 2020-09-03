@@ -1,23 +1,22 @@
 import React from 'react';
-import { withRouter } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 
 
 const UserCart = (props) => {
-
     let items = props.products.filter(item => !item.available) 
-
+    
     function total() {
         let items = props.products.filter(item => !item.available) 
-
+        
         let t = 0;
         items.forEach(item => t += item.cost_in_credits)
         return t
     }
-
+    
     function handleBtnClick() {
         props.history.push(`/purchase-complete`) 
-      }
-       
+    }
+    
     return (
         <div className='container'>
             <div>

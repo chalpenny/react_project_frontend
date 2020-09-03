@@ -14,6 +14,6 @@ export const updateProductStatus = (status, productId) => {
             payload: product
             })
         ) 
-    }
+    };
     
 }  

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import LikesButton from './LikesButton';
 
 
 class ProductsList extends Component {      
@@ -9,6 +10,7 @@ class ProductsList extends Component {
             return <ul className="card red white-text">This product is currently unavailable</ul>}
         else {return null}
     }
+
 
     render() {
         return (
@@ -26,6 +28,7 @@ class ProductsList extends Component {
                                 </div>
                                 <div className="card-action, card-content"> 
                                 <ul className="card red white-text">{this.showAvailability(product)}</ul>
+                                <LikesButton/>
                             </div>
                             </div>
                         </div>

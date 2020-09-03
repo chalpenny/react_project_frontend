@@ -8,6 +8,6 @@ export function fetchProducts()   {
             payload: data
             })
         )
-    }
+    };
 
 }
